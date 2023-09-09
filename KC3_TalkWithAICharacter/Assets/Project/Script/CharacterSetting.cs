@@ -11,13 +11,13 @@ public class CharacterSetting : MonoBehaviour
     void Awake()
     {
         string characterName = "ゆにてぃ";
-        string userName = "ナツキ";
+        string userName = "ユーザー";
         string gender = "girl";
         string date = "2023/07/22";
         string time = "03:45";
         string location = "your room";
         string relationships = "best friends";
-        string firstPerson = "ボク";
+        string firstPerson = "私";
         string language = "Japanese";
 
         characterSetting = $@"

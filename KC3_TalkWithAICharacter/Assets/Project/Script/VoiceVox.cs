@@ -12,6 +12,8 @@ public class VoiceVox : MonoBehaviour
     private int currentKey = 0;
     private int lastKey = -1;
 
+    public int characterId = 50;
+
     void Start()
     {
         //StartCoroutine(Speak("こんにちは！みんなもUnityでVOICEVOXを使おう！")); 
@@ -25,8 +27,8 @@ public class VoiceVox : MonoBehaviour
         // VOICEVOXのREST-APIクライアント
         VoiceVoxApiClient client = new VoiceVoxApiClient();
 
-        // テキストからAudioClipを生成（話者は「8:春日部つむぎ」）
-        yield return client.TextToAudioClip(50, text);
+        // テキストからAudioClipを生成
+        yield return client.TextToAudioClip(characterId, text);
 
         if (client.AudioClip != null)
         {
